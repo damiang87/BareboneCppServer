@@ -9,11 +9,11 @@
 #include "../server/RequestHandler.h"
 #include <thread>
 
-void RequestHandler(Ortosoft::Software::TCPServer* server, int client, std::string msg);
+void RequestHandler(Homecode::Software::TCPServer* server, int client, std::string msg);
 
 int main(int argc, char* argv[])
 {
-	Ortosoft::Software::TCPServer myServer("127.0.0.1", 123, RequestHandler);	//loopback to the owner Ip, or better put here your IpV4 addres,port
+	Homecode::Software::TCPServer myServer("127.0.0.1", 123, RequestHandler);	//loopback to the owner Ip, or better put here your IpV4 addres,port
 	
 	if (myServer.Init())
 	{
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void RequestHandler(Ortosoft::Software::TCPServer* server, int client, std::string querry)
+void RequestHandler(Homecode::Software::TCPServer* server, int client, std::string querry)
 {
 	//[TCPServer* server] object can perform some actions only here, not in new thred
 	//f.e. send pending status to the client: server->Send(client, "querry is being processing" );

@@ -1,6 +1,6 @@
 #include "TCPServer.h"
 
-namespace Ortosoft
+namespace Homecode
 {
 	namespace Software
 	{

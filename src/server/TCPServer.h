@@ -7,7 +7,7 @@
 #pragma comment (lib, "ws2_32.lib")	// winsock lib file
 #define MAX_BUFFER_SIZE (100*1024)
 
-namespace Ortosoft
+namespace Homecode
 {
 	namespace Software
 	{
